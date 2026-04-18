@@ -8,7 +8,10 @@
   "env": {
     "vars": {
       "GOOGLE_API_KEY": "AIzaSyBiCn0PuhwSf-Yvh6U15NVHNhxVgNQ-oMo",
-      "TELEGRAM_BOT_TOKEN": "8569264798:AAGJsumP1QfEEVW0YycJQJ2JQcnT84fksl0"
+      "TELEGRAM_BOT_TOKEN": "8569264798:AAGJsumP1QfEEVW0YycJQJ2JQcnT84fksl0",
+      "SIMPLYNOTED_API_KEY": "",
+      "SIMPLYNOTED_USER_ID": "",
+      "SIMPLYNOTED_SENDER_PROFILE_ID": ""
     }
   },
   "agents": {
