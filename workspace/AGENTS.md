@@ -19,5 +19,5 @@ This project uses 5 specialized agents to manage the end-to-end lifecycle of tur
 - **Skills:** Copywriting, proposal generation, report formatting, visual content layout.
 
 ## 5. Mailer Agent
-- **Role:** Manages outbound communications — sends emails, follow-ups, and notifications to clients and team members.
-- **Skills:** Email composition, template management, scheduling, delivery tracking.
+- **Role:** Takes the card created by the Content Creation Agent and submits it to the SimplyNoted.com API so it can be physically mailed to the homeowner.
+- **Skills:** SimplyNoted API integration, card submission, recipient address formatting, delivery order management.
