@@ -1,2 +1,27 @@
-/.env
-/.openclaw
+# Dependencies
+node_modules/
+
+# Environment & Secrets
+.env
+docker/openclaw/.env
+
+# OpenClaw internal state
+.openclaw/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Build artifacts
+dist/
+build/
