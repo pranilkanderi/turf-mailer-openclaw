@@ -1,0 +1,15 @@
+name: oc-turfbot
+services:
+  ai-bot:
+    build: .
+    container_name: openclaw-turfbot
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - OPENCLAW_HOME=/root/project/.openclaw
+      - OPENCLAW_STATE_DIR=/root/project/.openclaw
+    volumes:
+      - ../../.openclaw:/root/project/.openclaw
+    ports:
+      - "18791:18791"

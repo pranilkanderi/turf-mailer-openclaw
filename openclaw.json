@@ -1,0 +1,33 @@
+{
+  "$schema": "https://docs.openclaw.ai/schema.json",
+  "identity": {
+    "name": "turfbot",
+    "theme": "Turfproject AI Assistant",
+    "emoji": "🌱"
+  },
+  "env": {
+    "vars": {
+      "GOOGLE_API_KEY": "AIzaSyBiCn0PuhwSf-Yvh6U15NVHNhxVgNQ-oMo",
+      "TELEGRAM_BOT_TOKEN": "8569264798:AAGJsumP1QfEEVW0YycJQJ2JQcnT84fksl0"
+    }
+  },
+  "agents": {
+    "defaults": {
+      "workspace": "./workspace",
+      "model": {
+        "primary": "google/gemini-1.5-pro-latest",
+        "fallback": "ollama/gemma4:26b"
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "botToken": "8569264798:AAGJsumP1QfEEVW0YycJQJ2JQcnT84fksl0",
+      "dmPolicy": "open"
+    }
+  },
+  "gateway": {
+    "port": 18789
+  }
+}

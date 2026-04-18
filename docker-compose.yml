@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  openclaw:
+    image: openclaw/openclaw:latest
+    container_name: turfproject-bot
+    ports:
+      - "18789:18789"
+    volumes:
+      - .:/app
+      - ./workspace:/app/workspace
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+    restart: always
