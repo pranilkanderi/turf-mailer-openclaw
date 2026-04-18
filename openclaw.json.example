@@ -11,7 +11,8 @@
       "TELEGRAM_BOT_TOKEN": "",
       "SIMPLYNOTED_API_KEY": "",
       "SIMPLYNOTED_USER_ID": "",
-      "SIMPLYNOTED_SENDER_PROFILE_ID": ""
+      "SIMPLYNOTED_SENDER_PROFILE_ID": "",
+      "OPENAI_API_KEY": ""
     }
   },
   "agents": {
