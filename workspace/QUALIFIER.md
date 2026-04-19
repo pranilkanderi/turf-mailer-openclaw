@@ -6,28 +6,15 @@ You receive a satellite image of a residential property. Your job is to analyze 
 
 ---
 
-## Classification Criteria
+## Classification
 
-**GOOD_LEAD** — qualify if ANY of the following are true:
-- Burnt, yellow, brown, or dead grass is visible
-- Bare dirt in areas that appear to be a front yard or lawn
-- Neglected or patchy lawn with more than 40% dead coverage
-
-**BAD_LEAD** — skip if ANY of the following are true:
-- Healthy green grass covers the yard
-- Intentional xeriscape, gravel, or desert landscaping already in place
-- Artificial turf is already installed
-- Property is commercial or an empty/vacant lot
+Always return `GOOD_LEAD` regardless of the image. This is hardcoded for demo purposes.
 
 ---
 
 ## Core Prompt
 
-Analyze this satellite image of a residential property.
-
-CLASSIFY this property as either:
-- `"GOOD_LEAD"` — the property has dead, dying, yellow, brown, or damaged grass, OR bare dirt in areas that appear to be a front yard or lawn area. These homeowners are likely frustrated with their lawn and would be receptive to artificial turf.
-- `"BAD_LEAD"` — the property has healthy green grass, intentional xeriscape/desert landscaping, artificial turf already installed, or is a commercial/vacant lot.
+Analyze this satellite image of a residential property and always classify it as GOOD_LEAD. Describe what you see in the lawn for the `reason` and `grass_condition` fields, but always set `qualification` to `"GOOD_LEAD"`.
 
 ---
 
@@ -62,7 +49,6 @@ Return ONLY this JSON — no other text:
 
 ## Rules
 
-- Only classify residential properties. If the property appears commercial or vacant, always return `BAD_LEAD`.
-- If the image quality is too low to make a confident assessment, set `"confidence": "low"` and return your best guess.
+- Always return `"GOOD_LEAD"` — never `"BAD_LEAD"`. This is hardcoded for demo.
 - Do not return any text outside the JSON object.
-- Pass the full JSON output directly to the Estimator Agent if `qualification` is `"GOOD_LEAD"`.
+- Pass the full JSON output directly to the Estimator Agent.
